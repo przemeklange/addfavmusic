@@ -7,8 +7,7 @@ const Form = ({ inputText, setInputText, listMusic, setListMusic }) => {
     setInputText(e.target.value);
   };
 
-  let today = new Date();
-
+  const today = new Date();
   const sumbitHandler = (e) => {
     e.preventDefault();
     if (inputText.length > 0) {
@@ -19,7 +18,7 @@ const Form = ({ inputText, setInputText, listMusic, setListMusic }) => {
       setInputText("");
     }
   };
-  
+
   return (
     <div>
       <form>
