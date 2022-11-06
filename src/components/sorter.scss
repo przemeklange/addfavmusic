@@ -1,0 +1,38 @@
+.sorter {
+  padding: 20px 0 30px;
+  border-top: 1px solid #f4f6fa;
+
+  button {
+    padding: 10px;
+    margin: 0 10px;
+    background-color: rgba(46, 50, 57, 1);
+    border: none;
+    font-size: 14px;
+    color: #f4f6fa;
+    text-transform: uppercase;
+    transition: 0.3s all;
+    cursor: pointer;
+    display: flex;
+    line-height: 14px;
+    border-radius: 8px;
+
+    &:hover {
+      background-color: rgba(66, 68, 90, 0.1);
+      color: white;
+    }
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .sorter {
+    flex-wrap: wrap;
+  }
+
+  .sorter button {
+    margin: 5px;
+  }
+
+  button.grid {
+    display: none;
+  }
+}
