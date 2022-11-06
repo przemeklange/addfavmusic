@@ -19,6 +19,7 @@ const Form = ({ inputText, setInputText, listMusic, setListMusic }) => {
       setInputText("");
     }
   };
+  
   return (
     <div>
       <form>

@@ -36,7 +36,6 @@ const Sorter = ({grid, setGrid, listMusic, setListMusic }) => {
     );
   };
 
-
   const handlerGrid = () => {
     setGrid(!grid);
     console.log(grid)
