@@ -1,6 +1,6 @@
-import React from "react";
+import React, { useState } from "react";
 import { AiOutlineFileAdd } from "react-icons/ai";
-import './form.scss'
+import "./form.scss";
 
 const Form = ({ inputText, setInputText, listMusic, setListMusic }) => {
   const handlerText = (e) => {
@@ -8,12 +8,27 @@ const Form = ({ inputText, setInputText, listMusic, setListMusic }) => {
   };
 
   const today = new Date();
+  let [elem, setEleme] = useState(0);
   const sumbitHandler = (e) => {
     e.preventDefault();
+
+    console.log(elem);
     if (inputText.length > 0) {
+      elem++;
+      setEleme(elem);
       setListMusic([
         ...listMusic,
-        { text: inputText, wish: false, id: Math.round(Math.random() * 1000), time: today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds() },
+        {
+          text: inputText,
+          wish: false,
+          id: elem,
+          time:
+            today.getHours() +
+            ":" +
+            today.getMinutes() +
+            ":" +
+            today.getSeconds(),
+        },
       ]);
       setInputText("");
     }
